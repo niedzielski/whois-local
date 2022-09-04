@@ -9,7 +9,7 @@ src_files := $(wildcard $(src_dir)/*.foo)
 db_files := $(zone_files:$(zone_dir)/%.txt.gz=$(dist_dir)/%.sqlite3)
 
 .PHONY: query
-query:
+query: build
   src/index.js
 
 .PHONY: build
@@ -26,8 +26,8 @@ $(dist_dir)/%.sqlite3: $(dist_dir)/%.names | $(dist_dir)/
 #   .mode tab
 #   .import com.txt domains
 $(dist_dir)/%.names: $(dist_dir)/%.txt | $(dist_dir)/
-  cut --delimiter=. --fields=1 '$<' > '$@'|
-  uniq
+  cut --delimiter=. --fields=1 '$<'|
+  uniq - '$@'
 
 $(dist_dir)/%.txt: $(zone_dir)/%.txt.gz | $(dist_dir)/
   gzip --decompress --to-stdout '$<' > '$@'

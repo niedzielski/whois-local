@@ -10,7 +10,6 @@
 
 1. [Request a .com zone file](https://czds.icann.org/home) per the
   [article](https://sive.rs/com).
-
   - My given request rationale was:
     > Quickly and privately query domain availability locally without flooding
     > whois with requests.
@@ -18,7 +17,6 @@
   - com domains alone is about 4.8 gigabytes.
 
 2. Download the zone file and move it to zones/.
-
   - I had to use Firefox for the download.
 
 3. Fill out words.json with some candidates to mishmash.
