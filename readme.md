@@ -23,9 +23,11 @@
 
 3. Fill out words.json with some candidates to mishmash.
 
-4. Execute `make`. Warning: this generates about 50 gigabytes of additional data.
+4. `npm install`.
 
-5. 🤞 no one is hoarding domains just for money.
+5. Execute `make`. Warning: this generates about 50 gigabytes of additional data.
+
+6. 🤞 no one is hoarding domains just for money.
 
 ## License
 
