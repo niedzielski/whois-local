@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import words from "../words.json" assert { type: "json" };
+import words from "./words.json" assert { type: "json" };
 import sqlite3 from "sqlite3";
 
 const db = new sqlite3.Database("dist/com.sqlite3");
