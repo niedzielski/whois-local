@@ -1,0 +1,12 @@
+{
+  "author": "Stephen Niedzielski <stephen@niedzielski.com> (https://niedzielski.com/)",
+  "dependencies": {
+    "sqlite3": "5.0.11"
+  },
+  "description": "",
+  "license": "AGPL-3.0-only",
+  "main": "index.js",
+  "type": "module",
+  "name": "whois-local",
+  "version": "0.0.0"
+}
