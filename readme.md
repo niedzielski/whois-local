@@ -4,28 +4,45 @@
 
 1. Pair a list of words with itself and
 2. Query [WHOIS](https://en.wikipedia.org/wiki/WHOIS) locally for `<pair>.com`
-  and report domain availability.
+   and report domain availability.
 
 ## Set up
 
 1. [Request a .com zone file](https://czds.icann.org/home) per the
-  [article](https://sive.rs/com).
-  - My given request rationale was:
-    > Quickly and privately query domain availability locally without flooding
-    > whois with requests.
-  - It expires about 11 years after granted. It seems to update periodically.
-  - com domains alone is about 4.8 gigabytes.
+   [article](https://sive.rs/com).
+   - My given request rationale was:
+   > Quickly and privately query domain availability locally without flooding
+   > whois with requests.
+   - It expires about 11 years after granted. It seems to be updated
+     periodically.
+   - com domains alone is about 4.8 gigabytes.
 
 2. Download the zone file and move it to zones/.
-  - I had to use Firefox for the download.
+   - I had to use Firefox for the download.
 
 3. Fill out words.json with some candidates to mishmash.
 
-4. `npm install`.
+4. Execute `make`. Warning: this generates about 50 gigabytes of additional
+   data.
 
-5. Execute `make`. Warning: this generates about 50 gigabytes of additional data.
+5. 🤞 no one is hoarding domains just for money.
 
-6. 🤞 no one is hoarding domains just for money.
+## Quick WHOIS query
+
+### Example of an unavailable domain
+
+```
+$ sqlite3 dist/com.sqlite3 "select domain from domains where domain = 'example';"
+domain 
+-------
+example
+```
+
+### Example of an available domain
+
+```
+$ sqlite3 dist/com.sqlite3 "select domain from domains where domain = 'example99';"
+```
 
 ## License
 

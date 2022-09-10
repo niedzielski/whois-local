@@ -10,7 +10,7 @@ db_files := $(zone_files:$(zone_dir)/%.txt.gz=$(dist_dir)/%.sqlite3)
 
 .PHONY: query
 query: build
-  src/index.js
+  src/index.ts
 
 .PHONY: build
 build: $(db_files)

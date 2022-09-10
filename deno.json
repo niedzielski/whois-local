@@ -1,0 +1,13 @@
+{
+  // https://deno.land/manual@main/typescript/configuration
+  "compilerOptions": {
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "useUnknownInCatchVariables": true
+  },
+  "fmt": { "options": { "singleQuote": true } },
+  "importMap": "mods.json"
+}
