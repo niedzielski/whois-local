@@ -16,6 +16,7 @@ query: build
 build: $(db_files)
 
 $(dist_dir)/%.sqlite3: $(dist_dir)/%.names | $(dist_dir)/
+  $(rm) '$@' # Replace any existing database.
   sqlite3 '$@' < '$(src_dir)/init.sql'
 
 # The format is a zone file (https://en.wikipedia.org/wiki/Zone_file)

@@ -13,7 +13,7 @@
   - My given request rationale was:
     > Quickly and privately query domain availability locally without flooding
     > whois with requests.
-  - It expires about 11 years after granted. I'm unsure if it ever updates.
+  - It expires about 11 years after granted. It seems to update periodically.
   - com domains alone is about 4.8 gigabytes.
 
 2. Download the zone file and move it to zones/.
