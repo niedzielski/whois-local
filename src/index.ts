@@ -1,8 +1,11 @@
 #!/usr/bin/env -S deno run --allow-read --allow-write
 import { DB } from "sqlite";
-import words from "./words.json" assert { type: "json" };
 
 const db = new DB("dist/com.sqlite3");
+
+const decoder = new TextDecoder('utf8')
+const wordsBin = (await Deno.readFile('src/words.text'))
+const words = decoder.decode(wordsBin).split('\n').filter(Boolean);
 
 function isAvailable(db: DB, domain: string): boolean {
   return db.query(
