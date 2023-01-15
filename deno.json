@@ -8,6 +8,14 @@
     "noUnusedParameters": true,
     "useUnknownInCatchVariables": true
   },
-  "fmt": { "options": { "singleQuote": true } },
-  "importMap": "src/mods.json"
+  "fmt": {
+    "options": { "singleQuote": true }
+  },
+  "importMap": "mods.json",
+  "lint": {
+    "rules": {
+      "exclude": ["no-empty-interface", "no-inferrable-types", "no-namespace"]
+    }
+  },
+  "lock": false
 }
