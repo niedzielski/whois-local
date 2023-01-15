@@ -1,10 +1,10 @@
-#!/usr/bin/env -S deno run --allow-read --allow-write
+#!/usr/bin/env -S deno --quiet run --allow-read --allow-write --check=typescript
 import { DB } from "sqlite";
 
 const db = new DB("dist/com.sqlite3");
 
-const decoder = new TextDecoder('utf8')
-const wordsBin = (await Deno.readFile('src/words.text'))
+const decoder = new TextDecoder('utf8');
+const wordsBin = (await Deno.readFile('src/words.text'));
 const words = decoder.decode(wordsBin).split('\n').filter(Boolean);
 
 function isAvailable(db: DB, domain: string): boolean {

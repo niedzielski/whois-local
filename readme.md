@@ -3,7 +3,7 @@
 [Find a good .com not yet taken](https://sive.rs/com) code. Does two things:
 
 1. Pair a list of words with itself and
-2. Query [WHOIS](https://en.wikipedia.org/wiki/WHOIS) locally for `<pair>.com`
+2. Query [WHOIS](https://en.wikipedia.org/wiki/WHOIS) offline for `<pair>.com`
    and report domain availability.
 
 ## Set up
@@ -18,7 +18,7 @@
    - com domains alone is about 4.8 gigabytes.
 
 2. Download the zone file and move it to zones/.
-   - I had to use Firefox for the download.
+   - I had to copy the network request as a curl command.
 
 3. Fill out words.json with some candidates to mishmash.
 
